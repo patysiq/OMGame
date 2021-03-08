@@ -9,23 +9,25 @@
 /* Begin PBXBuildFile section */
 		7B6D3BBB25F5647800215887 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6D3BBA25F5647800215887 /* AppDelegate.swift */; };
 		7B6D3BBD25F5647800215887 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7B6D3BBC25F5647800215887 /* GameScene.sks */; };
-		7B6D3BBF25F5647800215887 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7B6D3BBE25F5647800215887 /* Actions.sks */; };
 		7B6D3BC125F5647800215887 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6D3BC025F5647800215887 /* GameScene.swift */; };
 		7B6D3BC325F5647800215887 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6D3BC225F5647800215887 /* GameViewController.swift */; };
 		7B6D3BC625F5647800215887 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B6D3BC425F5647800215887 /* Main.storyboard */; };
 		7B6D3BC825F5647900215887 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B6D3BC725F5647900215887 /* Assets.xcassets */; };
+		7B6D3BD525F5768F00215887 /* Explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7B6D3BD425F5768F00215887 /* Explosion.sks */; };
+		7B6D3BD825F57CD200215887 /* Background.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 7B6D3BD725F57CD200215887 /* Background.fsh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7B6D3BB725F5647800215887 /* OMGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OMGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B6D3BBA25F5647800215887 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B6D3BBC25F5647800215887 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		7B6D3BBE25F5647800215887 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		7B6D3BC025F5647800215887 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		7B6D3BC225F5647800215887 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		7B6D3BC525F5647800215887 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7B6D3BC725F5647900215887 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B6D3BC925F5647900215887 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B6D3BD425F5768F00215887 /* Explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Explosion.sks; sourceTree = "<group>"; };
+		7B6D3BD725F57CD200215887 /* Background.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Background.fsh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +62,9 @@
 			children = (
 				7B6D3BBA25F5647800215887 /* AppDelegate.swift */,
 				7B6D3BBC25F5647800215887 /* GameScene.sks */,
-				7B6D3BBE25F5647800215887 /* Actions.sks */,
 				7B6D3BC025F5647800215887 /* GameScene.swift */,
+				7B6D3BD725F57CD200215887 /* Background.fsh */,
+				7B6D3BD425F5768F00215887 /* Explosion.sks */,
 				7B6D3BC225F5647800215887 /* GameViewController.swift */,
 				7B6D3BC425F5647800215887 /* Main.storyboard */,
 				7B6D3BC725F5647900215887 /* Assets.xcassets */,
@@ -128,9 +131,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B6D3BC625F5647800215887 /* Main.storyboard in Resources */,
+				7B6D3BD525F5768F00215887 /* Explosion.sks in Resources */,
+				7B6D3BD825F57CD200215887 /* Background.fsh in Resources */,
 				7B6D3BBD25F5647800215887 /* GameScene.sks in Resources */,
 				7B6D3BC825F5647900215887 /* Assets.xcassets in Resources */,
-				7B6D3BBF25F5647800215887 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +289,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 937MK3AF6X;
 				INFOPLIST_FILE = OMGame/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -292,7 +297,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.patriciasampaiosiqueira.OMGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -304,6 +309,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 937MK3AF6X;
 				INFOPLIST_FILE = OMGame/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,7 +317,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.patriciasampaiosiqueira.OMGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
